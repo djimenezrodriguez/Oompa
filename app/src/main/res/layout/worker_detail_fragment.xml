@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.napptilus.oompaloompa.presentation.workerDetailFragment.viewModel.WorkerDetailFragmentVM" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#FCD46A">
+
+            <TextView
+                android:id="@+id/title_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/title_detail"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_detail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:imageUrl="@{viewModel.userDetails.image}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_detail" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="60dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_detail">
+
+                <TextView
+                    android:id="@+id/title_name_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_name"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        app:textCheckHtml="@{viewModel.userDetails.firstName}"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/lastname_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="8dp"
+                        app:textCheckHtml="@{viewModel.userDetails.last_name}"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_email_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_email"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.email}"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/title_gender_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_gender"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/gender_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.gender}"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/title_description_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_description"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.description}" />
+
+                <TextView
+                    android:id="@+id/title_profession_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_proffesion"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profession_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.profession}"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/title_height_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_height"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/height_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.height}"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/title_country_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_country"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/country_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.country}"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/title_age_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_age"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/age_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.age}"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/title_favourites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:text="@string/title_favorites"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/color_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.favourite_thinks.color}"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/title_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_food"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/food_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:textCheckHtml="@{viewModel.userDetails.favourite_thinks.food}"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

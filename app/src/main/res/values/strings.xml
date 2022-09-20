@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">OompaLoompa</string>
+    <!--TITLES-->
     <string name="title_Oompa">WELCOME OOMPA ADMIN</string>
-
+    <string name="title_Oompa_search">OOMPA FINDER</string>
+    <string name="title_Oompa_splash">OOMPA LOOMPA \n GO IT!</string>
+    <string name="title_name">Name and surnames: </string>
+    <string name="title_gender">gender: </string>
+    <string name="title_proffesion">Profession: </string>
+    <string name="title_country">Country: </string>
+    <string name="title_detail">Personal Information</string>
+    <string name="title_email">Email: </string>
+    <string name="title_height">Height: </string>
+    <string name="title_color">Color: </string>
+    <string name="title_food">Food: </string>
+    <string name="title_song">Song: </string>
+    <string name="title_description">Description: </string>
+    <string name="title_age">Age: </string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_change_page">Change page</string>
+    <string name="title_search_filter">Select your search filter(default: name)</string>
+    <!--NETWORK-->
+    <string name="general_error">we are sorry, your request could not be fulfilled due to a service problem.</string>
+    <string name="no_network">You dont have internet connection</string>
+    <!--HINTS-->
+    <string name="hint_searcher">Search your worker by name</string>
+    <!--CHEKS-->
+    <string name="check_name">Name</string>
+    <string name="check_profession">Profession</string>
+    <!--BUTTON_TEXT-->
+    <string name="text_refresh">Refresh</string>
 </resources>

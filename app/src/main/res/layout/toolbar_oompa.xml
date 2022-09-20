@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="50dp">
+
     <ImageView
         android:id="@+id/tlbr_home_button"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_home_button"/>
+        android:src="@drawable/ic_home_button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <ImageView
         android:id="@+id/tlbr_return_button"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/ic_return_arrow"/>
+        android:src="@drawable/ic_return_arrow"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/tlbr_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintLeft_toRightOf="@+id/tlbr_return_button"
+        android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/tlbr_home_button"
-        android:textAlignment="center"/>
+        app:layout_constraintLeft_toRightOf="@+id/tlbr_return_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
