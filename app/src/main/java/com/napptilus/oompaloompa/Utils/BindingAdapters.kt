@@ -22,16 +22,3 @@ fun textCheckHtml(textView: TextView, textToPut: String?) {
     }
 
 }
-
-@BindingAdapter("dateFormatter")
-fun TextView.dateFormatter(string: String?) {
-    if (string?.isNotEmpty() == true) {
-        val date = SimpleDateFormat("yyyy-mm-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(string)
-        date?.let {
-            val format = SimpleDateFormat("dd/MM/yyy", Locale.getDefault())
-            this.text = format.format(it)
-        }
-
-    }
-
-}
