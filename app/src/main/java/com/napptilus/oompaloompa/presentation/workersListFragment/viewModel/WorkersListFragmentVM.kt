@@ -1,6 +1,5 @@
 package com.napptilus.oompaloompa.presentation.workersListFragment.viewModel
 
-import android.app.Activity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,7 +15,6 @@ import javax.inject.Inject
 class WorkersListFragmentVM @Inject constructor(
     private val workersListRepository: OompaRepository
 ) : ViewModel() {
-
 
 
     val data = workersListRepository.workers

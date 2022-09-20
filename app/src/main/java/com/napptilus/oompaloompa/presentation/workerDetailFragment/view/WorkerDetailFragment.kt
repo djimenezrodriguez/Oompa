@@ -47,14 +47,15 @@ class WorkerDetailFragment : Fragment() {
         viewModel.getUserDetails(args.worker).observe(viewLifecycleOwner) {
             viewModel.userDetails.set(it)
         }
-        viewModel.response.observe(viewLifecycleOwner){
-            if(it?.isSuccessful == false && !it.message().isNullOrEmpty()){
+        viewModel.response.observe(viewLifecycleOwner) {
+            if (it?.isSuccessful == false && !it.message().isNullOrEmpty()) {
                 errorCheck(resources.getString(R.string.general_error))
-            }else if(it == null){
+            } else if (it == null) {
                 errorCheck(resources.getString(R.string.no_network))
             }
         }
     }
+
     fun errorCheck(message: String) {
         val builder1 = AlertDialog.Builder(requireActivity())
         builder1.setMessage(message)

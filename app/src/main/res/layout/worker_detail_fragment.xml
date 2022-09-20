@@ -66,8 +66,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="8dp"
-                        app:textCheckHtml="@{viewModel.userDetails.firstName}"
-                        android:textStyle="italic" />
+                        android:textStyle="italic"
+                        app:textCheckHtml="@{viewModel.userDetails.firstName}" />
 
                     <TextView
                         android:id="@+id/lastname_detail"
@@ -75,8 +75,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="8dp"
                         android:layout_marginStart="8dp"
-                        app:textCheckHtml="@{viewModel.userDetails.last_name}"
-                        android:textStyle="italic" />
+                        android:textStyle="italic"
+                        app:textCheckHtml="@{viewModel.userDetails.last_name}" />
                 </LinearLayout>
 
                 <TextView
@@ -91,8 +91,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.email}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.email}" />
 
                 <TextView
                     android:id="@+id/title_gender_detail"
@@ -106,8 +106,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.gender}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.gender}" />
 
                 <TextView
                     android:id="@+id/title_description_detail"
@@ -136,8 +136,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.profession}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.profession}" />
 
                 <TextView
                     android:id="@+id/title_height_detail"
@@ -151,8 +151,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.height}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.height}" />
 
                 <TextView
                     android:id="@+id/title_country_detail"
@@ -166,8 +166,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.country}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.country}" />
 
                 <TextView
                     android:id="@+id/title_age_detail"
@@ -181,8 +181,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.age}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.age}" />
 
                 <TextView
                     android:id="@+id/title_favourites"
@@ -205,8 +205,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.favourite_thinks.color}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.favourite_thinks.color}" />
 
                 <TextView
                     android:id="@+id/title_food"
@@ -220,8 +220,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
-                    app:textCheckHtml="@{viewModel.userDetails.favourite_thinks.food}"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    app:textCheckHtml="@{viewModel.userDetails.favourite_thinks.food}" />
             </LinearLayout>
 
 

@@ -1,15 +1,11 @@
 package com.napptilus.oompaloompa.database.repository
 
-import android.app.AlertDialog
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import com.napptilus.oompaloompa.R
-import com.napptilus.oompaloompa.WorkersActivity
 import com.napptilus.oompaloompa.database.WorkersDatabase
 import com.napptilus.oompaloompa.database.client.WorkerClient
 import com.napptilus.oompaloompa.database.model.WorkersRoomModel
@@ -34,15 +30,15 @@ class OompaRepository @Inject constructor(
             it
         }
 
-    suspend fun getAllWorkers(page: Int):Response<WorkersNetworkModel>? {
-        var allWorkersResponse:Response<WorkersNetworkModel>? = null
-        if(checkForInternet(appContext)) {
+    suspend fun getAllWorkers(page: Int): Response<WorkersNetworkModel>? {
+        var allWorkersResponse: Response<WorkersNetworkModel>? = null
+        if (checkForInternet(appContext)) {
             allWorkersResponse = workerListService.listWorkers(page)
-            if(allWorkersResponse.isSuccessful){
+            if (allWorkersResponse.isSuccessful) {
                 val workersList = workerListService.listWorkers(page).body()!!.results
                 database.workerDao.insertAllWorkers(workersList.asDatabaseModel())
             }
-            }
+        }
         return allWorkersResponse
     }
 
@@ -54,8 +50,8 @@ class OompaRepository @Inject constructor(
     }
 
     suspend fun refreshUserDetails(id: String): Response<WorkersNetworkModelInfo>? {
-        var workerDetailsResponse:Response<WorkersNetworkModelInfo>? = null
-            if(checkForInternet(appContext)){
+        var workerDetailsResponse: Response<WorkersNetworkModelInfo>? = null
+        if (checkForInternet(appContext)) {
             workerDetailsResponse = workerListService.detailWorker(id)
             if (workerDetailsResponse.isSuccessful && workerDetailsResponse.body() != null) {
                 val workerDetails = workerDetailsResponse.body()!!

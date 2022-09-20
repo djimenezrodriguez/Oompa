@@ -1,7 +1,5 @@
 package com.napptilus.oompaloompa.Utils
 
-import android.os.Build
-import android.text.Html
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -19,8 +17,8 @@ fun loadImage(view: ImageView, url: String?) {
 
 @BindingAdapter("textCheckHtml")
 fun textCheckHtml(textView: TextView, textToPut: String?) {
-    if(!textToPut.isNullOrEmpty()){
-       textView.text = Jsoup.parse(textToPut).text()
+    if (!textToPut.isNullOrEmpty()) {
+        textView.text = Jsoup.parse(textToPut).text()
     }
 
 }

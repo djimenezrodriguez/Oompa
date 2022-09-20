@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.napptilus.oompaloompa.database.repository.OompaRepository
-import com.napptilus.oompaloompa.presentation.workersListFragment.model.WorkersNetworkModel
 import com.napptilus.oompaloompa.presentation.workersListFragment.model.WorkersNetworkModelInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

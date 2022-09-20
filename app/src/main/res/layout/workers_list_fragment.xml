@@ -37,8 +37,8 @@
             android:id="@+id/title_filter_page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_search_filter"
             android:layout_marginTop="10dp"
+            android:text="@string/title_search_filter"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -46,24 +46,26 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
+
             <CheckBox
                 android:id="@+id/rb_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/check_name"/>
+                android:text="@string/check_name" />
+
             <CheckBox
                 android:id="@+id/rb_profession"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/check_profession"/>
+                android:text="@string/check_profession" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/title_search_page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_change_page"
             android:layout_marginTop="10dp"
+            android:text="@string/title_change_page"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -91,13 +93,14 @@
                 android:layout_height="35dp"
                 android:src="@drawable/ic_plusbutton" />
         </LinearLayout>
+
         <Button
             android:id="@+id/id_refresh_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="@string/text_refresh"/>
+            android:text="@string/text_refresh" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"

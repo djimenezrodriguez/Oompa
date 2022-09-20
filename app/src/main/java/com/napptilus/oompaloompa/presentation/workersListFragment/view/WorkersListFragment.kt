@@ -1,7 +1,6 @@
 package com.napptilus.oompaloompa.presentation.workersListFragment.view
 
 import android.app.AlertDialog
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +12,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.napptilus.oompaloompa.R
-import com.napptilus.oompaloompa.WorkersActivity
 import com.napptilus.oompaloompa.databinding.WorkersListFragmentBinding
 import com.napptilus.oompaloompa.presentation.workersListFragment.adapter.WorkerListAdapter
 import com.napptilus.oompaloompa.presentation.workersListFragment.viewModel.WorkersListFragmentVM
@@ -50,14 +48,14 @@ class WorkersListFragment : Fragment() {
                     adapter.submitList(viewModel.data.value)
                 } else {
                     val arrFiltered = viewModel.data.value?.filter {
-                        if(binding.rbName.isChecked && binding.rbProfession.isChecked ){
+                        if (binding.rbName.isChecked && binding.rbProfession.isChecked) {
                             it.profession.lowercase().contains(query.lowercase()) ||
                                     it.firstName.lowercase().contains(query.lowercase())
-                        }else if(binding.rbName.isChecked){
+                        } else if (binding.rbName.isChecked) {
                             it.firstName.lowercase().contains(query.lowercase())
-                        }else if(binding.rbProfession.isChecked){
+                        } else if (binding.rbProfession.isChecked) {
                             it.profession.lowercase().contains(query.lowercase())
-                        }else{
+                        } else {
                             it.firstName.lowercase().contains(query.lowercase())
                         }
                     }
@@ -79,19 +77,19 @@ class WorkersListFragment : Fragment() {
             }
 
         })
-        viewModel.response.observe(viewLifecycleOwner){
-            if(it?.isSuccessful == false && !it.message().isNullOrEmpty()){
+        viewModel.response.observe(viewLifecycleOwner) {
+            if (it?.isSuccessful == false && !it.message().isNullOrEmpty()) {
                 binding.idRefreshButton.visibility = View.VISIBLE
                 errorCheck(resources.getString(R.string.general_error))
-            }else if(it == null){
+            } else if (it == null) {
                 binding.idRefreshButton.visibility = View.VISIBLE
                 errorCheck(resources.getString(R.string.no_network))
-            }else{
+            } else {
                 binding.idRefreshButton.visibility = View.GONE
             }
         }
         binding.idRefreshButton.setOnClickListener {
-            viewModel.doCallWorkers(viewModel.page.value?:0)
+            viewModel.doCallWorkers(viewModel.page.value ?: 0)
         }
         binding.idPlusButon.setOnClickListener {
             viewModel.page.value = viewModel.page.value?.plus(1)
